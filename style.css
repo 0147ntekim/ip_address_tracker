@@ -49,8 +49,16 @@ input[type="image"]{
     background-color: var(--Very-Dark-Gray);
     padding: 20px;
     border-radius: 0 20px 20px 0;
+    width: 50px;
+    height: 100%;
+    flex: none;
+    border: none;
+    cursor: pointer;
 }
 
+input[type="image"]:hover{
+    background: hsl(0, 0%, 27%);
+}
 label{
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -63,23 +71,26 @@ label{
 
 .main{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: white;
     padding: 20px 10px;
     margin-top: -80px;
-    width: 90%;
+    width: 75%;
     margin: -80px 0px 0;
     border-radius: 20px;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    z-index: 1000;
-    text-align: center;
+    z-index: 5;
+    text-align: start;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .main_col{
     margin: 10px 0;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 .main_col span{
@@ -99,7 +110,9 @@ label{
 }
 
 #map {
-    height: 100vh; 
+    height: 100vh;
+    position: relative;
+    z-index: 1;
     margin-top: 0px;
 }
 
@@ -110,7 +123,7 @@ label{
     background-color: rgb(242, 247, 247);
     font-weight: 500;
 }
-
 .attribution a { 
     color: hsl(228, 45%, 44%);
 }
+
